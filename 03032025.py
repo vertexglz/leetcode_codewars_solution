@@ -35,13 +35,18 @@ for email in emails:
 
 #codewars
 
-
+#найти индексы элем массивов, которые в сумме дают таргет
 def two_sum(numbers, target):
-    temp = []
     for i in range(len(numbers)):
         for j in range(1,len(numbers)):
             if numbers[i] + numbers[j] == target and i != j:
-                temp.append ([i,j])
+                temp = (i,j)
     return temp
 
-print(two_sum ([1,2,3],4))
+#проверить валидацию пин-кода
+def validate_pin(pin):
+    if not len(pin) in [4,6]:
+        return False
+    if not pin.isdigit():
+        return False
+    return True
